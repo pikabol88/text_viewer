@@ -1,0 +1,59 @@
+# depslib dependency file v1.0
+1605260660 source:c:\users\public\winapi\tv_v0.1\main.c
+	<windows.h>
+	<tchar.h>
+	<math.h>
+	"components.h"
+	"scroll.h"
+	"textProcessing.h"
+	"textViewer.h"
+	"menu.h"
+	<stdio.h>
+	<conio.h>
+
+1604766847 c:\users\public\winapi\tv_v0.1\components.h
+
+1605220450 c:\users\public\winapi\tv_v0.1\scroll.h
+	<windows.h>
+	"components.h"
+
+1604603821 c:\users\public\winapi\tv_v0.1\textprocessing.h
+	"components.h"
+	<windows.h>
+
+1605218389 c:\users\public\winapi\tv_v0.1\textviewer.h
+	"components.h"
+	<malloc.h>
+	<string.h>
+	<windows.h>
+	<stdio.h>
+	<math.h>
+	"scroll.h"
+	"readtext.h"
+
+1605262698 source:c:\users\public\winapi\tv_v0.1\scroll.c
+	"scroll.h"
+
+1604606612 source:c:\users\public\winapi\tv_v0.1\textprocessing.c
+	"textProcessing.h"
+
+1605263676 source:c:\users\public\winapi\tv_v0.1\textviewer.c
+	"textViewer.h"
+
+1604605418 c:\users\public\winapi\tv_v0.1\menu.h
+
+1604605391 source:c:\users\public\winapi\tv_v0.1\menu.rc
+	"menu.h"
+
+1604760712 c:\users\public\winapi\tv_v0.1\hviewer.h
+	<windows.h>
+	<stdio.h>
+
+1604762707 c:\users\public\winapi\tv_v0.1\tviewer.h
+	<windows.h>
+	<stdio.h>
+
+1605212577 c:\users\public\winapi\tv_v0.1\readtext.h
+	<windows.h>
+	<stdio.h>
+

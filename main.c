@@ -275,6 +275,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam) {
 
                 case IDM_USUAL:
                     if(textIsLoaded){
+                        ShowScrollBar(hwnd, SB_HORZ, TRUE);
                         CheckMenuItem(hMenu, IDM_WRAP, MF_UNCHECKED);
                         CheckMenuItem(hMenu, IDM_USUAL, MF_CHECKED);
                         EnableMenuItem(hMenu, IDM_WRAP, MF_ENABLED);
@@ -290,6 +291,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam) {
                             //UploadScrollPosition(&hViewer, hViewer.textInfo->wrap->shift[hViewer.scrollParam.currentPoint.vertical]);
                             SetScrollParams(hwnd, &hViewer);
                             InvalidateRect(hwnd, 0, TRUE);
+
                         }
                     }else{
                         MessageBox(hwnd,

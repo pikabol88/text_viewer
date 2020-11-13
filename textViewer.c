@@ -1,18 +1,18 @@
 #include "textViewer.h"
 
 /*
-char*  ReadTextFromFile(PCHAR fileName, int *numOfSymbolsInText){
+char* ReadTextFromFile(PCHAR fileName, int *numOfSymbolsInText){
     char *text;
     FILE *file = fopen(fileName, "rb");
-    if(file){
-        fseek(file, 0 , SEEK_END);
+    if(file) {
+        fseek(file, 0, SEEK_END);
         int numOfSymbols = ftell(file);
         rewind(file);
         text = (PCHAR)calloc(sizeof(char), numOfSymbols + 1);
         if(text){
             fread(text, sizeof(char), numOfSymbols, file);
             fclose(file);
-            (*numOfSymbolsInText)=numOfSymbols;
+            (*numOfSymbolsInText) = numOfSymbols;
              return text;
         } else return NULL;
     }
@@ -41,7 +41,6 @@ void MyReadFile(PCHAR fileName, hViewer_t *hViewer, error_state_t *error){
         *error = MEMORY_ERROR;
     }
 }
-
 
 /** \brief
  *  Заполнение поля с информацией о шрифте в основной структуре просмотрщика текста

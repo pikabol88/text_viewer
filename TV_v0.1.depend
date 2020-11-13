@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1605260660 source:c:\users\public\winapi\tv_v0.1\main.c
+1605291430 source:c:\users\public\winapi\tv_v0.1\main.c
 	<windows.h>
 	<tchar.h>
 	<math.h>
@@ -31,13 +31,13 @@
 	"scroll.h"
 	"readtext.h"
 
-1605262698 source:c:\users\public\winapi\tv_v0.1\scroll.c
+1605287806 source:c:\users\public\winapi\tv_v0.1\scroll.c
 	"scroll.h"
 
 1604606612 source:c:\users\public\winapi\tv_v0.1\textprocessing.c
 	"textProcessing.h"
 
-1605263676 source:c:\users\public\winapi\tv_v0.1\textviewer.c
+1605281839 source:c:\users\public\winapi\tv_v0.1\textviewer.c
 	"textViewer.h"
 
 1604605418 c:\users\public\winapi\tv_v0.1\menu.h

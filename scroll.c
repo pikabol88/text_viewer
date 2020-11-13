@@ -113,17 +113,17 @@ void SetScrollParams(HWND hwnd, hViewer_t * hViewer) {
     infoForScroll_t  ifs;
     FillInfoForScroll(&ifs, hViewer);
     SetScrollCoefficient(&ifs, hViewer);
-    hViewer->scrollParam.position.vertical = (int)hViewer->scrollParam.coefficient.vertical * hViewer->scrollParam.currentPoint.vertical;
+    //для верстки это должно выглядеть так
+    hViewer->scrollParam.position.vertical = (int)(hViewer->scrollParam.currentPoint.vertical)/(float)hViewer->scrollParam.coefficient.vertical;;
 
     CheckVerticalScroll(hwnd, hViewer, ifs);
     CheckHorizontalScroll(hwnd, hViewer, ifs);
 
     SetScrollRange(hwnd, SB_VERT, 0, min(ifs.numOfLinesInText -ifs.numOfLinesInWindow ,MAX_SCROLL_RANGE), TRUE);
     SetScrollRange(hwnd, SB_HORZ, 0, min(hViewer->textInfo->maxLength - ifs.maxSymbolsInLine, MAX_SCROLL_RANGE), TRUE);
-    SetScrollPos(hwnd, SB_VERT, hViewer->scrollParam.position.vertical, TRUE);
+    SetScrollPos(hwnd, SB_VERT, hViewer->scrollParam.position.vertical/*/(float)hViewer->scrollParam.coefficient.vertical*/, TRUE);
     SetScrollPos(hwnd, SB_HORZ, hViewer->scrollParam.position.horizontal, TRUE);
-
-
+   // hViewer->scrollParam.position.vertical = hViewer->scrollParam.position.vertical/hViewer->scrollParam.coefficient.vertical;
 }
 
 /** \brief

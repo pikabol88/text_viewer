@@ -20,10 +20,11 @@ void WrapTextOut(HDC hdc, hViewer_t *hViewer, PAINTSTRUCT ps) {
                        min(hViewer->wndParam.size.vertical/hViewer->fontParam.charHeight,
                            hViewer->textInfo->wrap->numOfLines - 1 - curString)) + 1;
 
-    for (int i = paintBegin; i < (hViewer->textInfo->wrap->numOfLines - curString) && i < paintEnd; i++) {
+	int i = paintBegin;
+    for (i = paintBegin; i < (hViewer->textInfo->wrap->numOfLines - curString) && i < paintEnd; i++) {
         countNum =  ( hViewer->textInfo->wrap->shift[curString + i + 1] -  hViewer->textInfo->wrap->shift[curString + i]);
         textForOut =  hViewer->textInfo->text + hViewer->textInfo->wrap->shift[curString + i];
-        TextOut(hdc, 0, i * hViewer->fontParam.charHeight,textForOut, countNum );
+        TextOut(hdc, 0, i * hViewer->fontParam.charHeight,textForOut, countNum - 1);
     }
 }
 
@@ -45,11 +46,12 @@ void UsualTextOut(HDC hdc, hViewer_t *hViewer, PAINTSTRUCT ps) {
                        min(hViewer->wndParam.size.vertical / hViewer->fontParam.charHeight,
                            hViewer->textInfo->numOfLines - 1 - currentLine)) + 1;
 
-    for (int i = paintBegin; i < paintEnd; i++) {
+    int i = paintBegin;
+    for (i = paintBegin; i < paintEnd; i++) {
         curLineLength = hViewer->textInfo->shift[currentLine + i + 1] - hViewer->textInfo->shift[currentLine + i];
         textForOut = hViewer->textInfo->text + hViewer->textInfo->shift[currentLine + i] + hViewer->scrollParam.currentPoint.horizontal;
         countNum = min(hViewer->wndParam.size.horizontal / hViewer->fontParam.charWidth, curLineLength - hViewer->scrollParam.currentPoint.horizontal);
-        TextOut(hdc, 0,  i * hViewer->fontParam.charHeight, textForOut, max(0, countNum));
+        TextOut(hdc, 0,  i * hViewer->fontParam.charHeight, textForOut, max(0, countNum - 1));
     }
 }
 

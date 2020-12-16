@@ -14,10 +14,13 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="C:/Users/Public/WinApi/TV_v0.1/" />
+					<Add directory="readtext" />
+					<Add directory="readtext/bin/Release" />
 				</Compiler>
 				<Linker>
 					<Add library="libcomdlg32.a" />
-					<Add library="bin/Debug/libreadtext.a" />
+					<Add library="readtext/bin/Release/libreadtext.a" />
+					<Add directory="readtext/bin/Release" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -28,16 +31,19 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="C:/Users/Public/WinApi/TV_v0.1/" />
+					<Add directory="readtext/bin/Release" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
 					<Add library="libcomdlg32.a" />
-					<Add library="bin/Debug/libreadtext.a" />
+					<Add library="readtext/bin/Release/libreadtext.a" />
+					<Add directory="readtext/bin/Release" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="readtext/bin/Release" />
 		</Compiler>
 		<ResourceCompiler>
 			<Add directory="C:/Users/Public/WinApi/TV_v0.1/" />
@@ -47,7 +53,8 @@
 			<Add library="user32" />
 			<Add library="kernel32" />
 			<Add library="comctl32" />
-			<Add library="bin/Debug/libreadtext.a" />
+			<Add library="readtext/bin/Release/libreadtext.a" />
+			<Add directory="readtext/bin/Release" />
 		</Linker>
 		<Unit filename="components.h" />
 		<Unit filename="main.c">

@@ -11,10 +11,10 @@ typedef enum error_state{
     USUAL - обычный
     WRAP - с версткой
 */
-typedef enum mode{
+typedef enum view_mode{
     USUAL,
     WRAP,
-}mode_t;
+}view_mode_t;
 
 
 /**
@@ -105,7 +105,7 @@ typedef struct textInfo {
     ќписатель представлени€ текста, объедин€ющий в себе структуры, которые были определены выше
  */
 typedef struct hViewer{
-    mode_t mode;
+    view_mode_t mode;
     textInfo_t *textInfo;
     wndParam_t wndParam;
     scrollParam_t scrollParam;

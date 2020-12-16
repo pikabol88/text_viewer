@@ -63,10 +63,11 @@ void FillFontInfo(hViewer_t *hViewer, TEXTMETRIC tm){
  */
 void FillTextInfo(textInfo_t *textInfo, error_state_t *error){
     int countLength=0;
+    int i = 0;
     textInfo->maxLength = 0;
     textInfo->numOfSymbols = strlen(textInfo->text);
     textInfo->numOfLines = 1;
-    for(int i = 0; i < textInfo->numOfSymbols; i++) {
+    for(i = 0; i < textInfo->numOfSymbols; i++) {
         countLength++;
         if(textInfo->text[i] == '\n' || textInfo->text[i] == '\0'){
             textInfo->numOfLines++;
@@ -93,10 +94,12 @@ void FillWrapInfo(textInfo_t *textInfo, int maxSymbolsInLine, error_state_t *err
         if(textInfo->wrap->shift){
             textInfo->wrap->shift[0]=0;
             int numOfSymbolsInCurrentLine, numOfWrapLines = 0;
-            for(int i = 0; i<textInfo->numOfLines;i++){
+            int i = 0;
+            for(i = 0; i<textInfo->numOfLines;i++){
                 numOfSymbolsInCurrentLine = textInfo->shift[i+1]-textInfo->shift[i] - 2;
                 int addLines = ceil((float)numOfSymbolsInCurrentLine / (float)maxSymbolsInLine);
-                for(int j = 1; j < addLines; j++){
+                int j;
+                for(j = 1; j < addLines; j++){
                     textInfo->wrap->shift[j+numOfWrapLines] = textInfo->shift[i] + maxSymbolsInLine*j;
                 }
                 numOfWrapLines += addLines;

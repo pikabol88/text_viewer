@@ -4,8 +4,8 @@
 #include "components.h"
 
 #define MAX_SCROLL_RANGE 65534
-#define max(a, b) (((a) > (b)) ? (a) : (b))
-#define min(a, b) (((a) < (b)) ? (a) : (b))
+//#define max(a, b) (((a) > (b)) ? (a) : (b))
+//#define min(a, b) (((a) < (b)) ? (a) : (b))
 
 void SetScrollParams(HWND hwnd, hViewer_t *hViewer);
 void SetStartParam(hViewer_t *hViewer);

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1605291430 source:c:\users\public\winapi\tv_v0.1\main.c
+1605338407 source:c:\users\public\winapi\tv_v0.1\main.c
 	<windows.h>
 	<tchar.h>
 	<math.h>
@@ -31,13 +31,13 @@
 	"scroll.h"
 	"readtext.h"
 
-1605287806 source:c:\users\public\winapi\tv_v0.1\scroll.c
+1605292645 source:c:\users\public\winapi\tv_v0.1\scroll.c
 	"scroll.h"
 
 1604606612 source:c:\users\public\winapi\tv_v0.1\textprocessing.c
 	"textProcessing.h"
 
-1605281839 source:c:\users\public\winapi\tv_v0.1\textviewer.c
+1605294219 source:c:\users\public\winapi\tv_v0.1\textviewer.c
 	"textViewer.h"
 
 1604605418 c:\users\public\winapi\tv_v0.1\menu.h
@@ -56,4 +56,54 @@
 1605212577 c:\users\public\winapi\tv_v0.1\readtext.h
 	<windows.h>
 	<stdio.h>
+
+1605974370 source:c:\users\public\winapi\tv_v2\main.c
+	<windows.h>
+	<tchar.h>
+	<math.h>
+	"components.h"
+	"scroll.h"
+	"textProcessing.h"
+	"textViewer.h"
+	"menu.h"
+	<stdio.h>
+	<conio.h>
+
+1605974418 c:\users\public\winapi\tv_v2\components.h
+
+1605974447 c:\users\public\winapi\tv_v2\scroll.h
+	<windows.h>
+	"components.h"
+
+1605974460 c:\users\public\winapi\tv_v2\textprocessing.h
+	"components.h"
+	<windows.h>
+
+1605974469 c:\users\public\winapi\tv_v2\textviewer.h
+	"components.h"
+	<malloc.h>
+	<string.h>
+	<windows.h>
+	<stdio.h>
+	<math.h>
+	"scroll.h"
+	"readtext.h"
+
+1605212577 c:\users\public\winapi\tv_v2\readtext.h
+	<windows.h>
+	<stdio.h>
+
+1605974436 c:\users\public\winapi\tv_v2\menu.h
+
+1605974504 source:c:\users\public\winapi\tv_v2\menu.rc
+	"menu.h"
+
+1605974385 source:c:\users\public\winapi\tv_v2\scroll.c
+	"scroll.h"
+
+1605975074 source:c:\users\public\winapi\tv_v2\textprocessing.c
+	"textProcessing.h"
+
+1605974401 source:c:\users\public\winapi\tv_v2\textviewer.c
+	"textViewer.h"
 

@@ -212,7 +212,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam) {
                     char buffer[256];
                     if(PopFileInitialize(hwnd, buffer)){
                         FreeLastData(&hViewer);
-                        MyReadFile((PCHAR)buffer,&hViewer, &error);
+                        MyReadFile((PCHAR)buffer, &hViewer, &error);
                         CheckSuccess(hwnd,error);
                         StartInitialization(hwnd, &hViewer,&error);
                         CheckSuccess(hwnd,error);
@@ -341,6 +341,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam) {
             GetWindowSize(hwnd,&hViewer, rect);
             if(textIsLoaded){
                 UpdateWrapParams(&hViewer, &error);
+                CheckSuccess(hwnd,error);
                 SetScrollParams(hwnd, &hViewer);
             }
             InvalidateRect(hwnd, 0, TRUE);

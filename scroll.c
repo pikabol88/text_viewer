@@ -129,13 +129,14 @@ void SetScrollParams(HWND hwnd, hViewer_t * hViewer) {
 /** \brief
  * Обновление текущего положения скрулла
  * \param hViewer_t *hViewer - основная структура для работы с просмотрщиком текста
- * \param int currentPosition - ??????? ??????? ????????????? ???????
+ * \param int currentPosition  - текущая позиция ползунка скрулла
  * \return void
  *
  */
 void UploadScrollPosition(hViewer_t  *hViewer, int currentPosition) {
+	int i = 0;
     if (hViewer->mode == WRAP){
-        for (int i = 0; i < hViewer->textInfo->wrap->numOfLines; i++) {
+        for (i = 0; i < hViewer->textInfo->wrap->numOfLines; i++) {
             if (currentPosition >= hViewer->textInfo->wrap->shift[i] && currentPosition < hViewer->textInfo->wrap->shift[i + 1]) {
                 hViewer->scrollParam.currentPoint.vertical = i;
                 break;
@@ -327,7 +328,8 @@ void ScrollThumbVertical(HWND hwnd, hViewer_t *hViewer, infoForScroll_t ifs){
  *
  */
 void FindScrollPositionWrap(hViewer_t *hViewer, int currentPosition){
-    for (int i = 0; i < hViewer->textInfo->wrap->numOfLines; i++) {
+	int i = 0;
+    for (i = 0; i < hViewer->textInfo->wrap->numOfLines; i++) {
         if (currentPosition >= hViewer->textInfo->wrap->shift[i] && currentPosition < hViewer->textInfo->wrap->shift[i + 1]) {
             hViewer->scrollParam.currentPoint.vertical = i;
             break;
@@ -344,7 +346,8 @@ void FindScrollPositionWrap(hViewer_t *hViewer, int currentPosition){
  *
  */
 void FindScrollPositionUsual(hViewer_t *hViewer, int currentPosition){
-    for (int i = 0; i < hViewer->textInfo->numOfLines; i++) {
+	int i = 0;
+    for (i = 0; i < hViewer->textInfo->numOfLines; i++) {
         if (currentPosition >= hViewer->textInfo->shift[i] && currentPosition < hViewer->textInfo->shift[i + 1]) {
             hViewer->scrollParam.currentPoint.vertical = i;
             break;

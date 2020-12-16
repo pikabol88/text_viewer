@@ -1,4 +1,0 @@
-EXPORTS
-    DllMain @1
-    ReadTextFromFile @2
-    SomeFunction @3

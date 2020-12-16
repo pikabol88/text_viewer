@@ -1,7 +1,7 @@
 #include "menu.h"
 
 
-IDI_MYICON ICON "C:/Users/Public/WinApi/TV_v0.1/book1.ico"
+IDI_MYICON ICON "book1.ico"
 
 menu MENU {
      /**< Работа с файлом */

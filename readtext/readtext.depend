@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1605979132 source:c:\documents and settings\администратор\рабочий стол\tv_v2\readtext\main.cpp
-	"readtext.h"
-
-1605979065 c:\documents and settings\администратор\рабочий стол\tv_v2\readtext\readtext.h
-	<windows.h>
-	<stdio.h>
-

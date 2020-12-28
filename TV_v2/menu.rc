@@ -1,0 +1,36 @@
+#include "menu.h"
+
+
+IDI_MYICON ICON "book1.ico"
+
+menu MENU {
+     /**< Работа с файлом */
+     POPUP "&File"
+     {
+         MENUITEM "&Open...", IDM_OPEN  /**< Открыть новый файл для просмотра */
+         MENUITEM SEPARATOR
+         MENUITEM "E&xit", IDM_EXIT  /**< Завершить работу программы и выйти */
+     }
+     /**< Выбор режима просмотра файла */
+     POPUP "&Mode"
+     {
+        MENUITEM "&Wrap", IDM_WRAP  /**< Режим с версткой */
+        MENUITEM "&Usual",IDM_USUAL, CHECKED, GRAYED  /**< Режим без верстки */
+     }
+     /**< Выбор цвета заднего фона */
+     POPUP "&Background"
+     {
+         MENUITEM "&White", IDM_WHITE, CHECKED /**< Белый */
+         MENUITEM "&Gray", IDM_GRAY /**< Серый */
+         MENUITEM "&Black", IDM_BLACK /**< Чёрный */
+         }
+    /**< Раздел помощи */
+     POPUP "&Help"
+     {
+         MENUITEM "&Help...", IDM_HELP /**< Как работать с программой?  */
+         MENUITEM "&About...", IDM_ABOUT /**< Информация о программе  */
+     }
+ }
+
+
+

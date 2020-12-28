@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="TV_v0.1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\TV_v0" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="C:\Users\Public\WinApi\TV_v0.1\" />
+				</Compiler>
+				<Linker>
+					<Add library="libcomdlg32.a" />
+					<Add library="bin\Debug\libreadtext.dll.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\TV_v0" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="C:\Users\Public\WinApi\TV_v0.1\" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libcomdlg32.a" />
+					<Add library="bin\Debug\libreadtext.dll.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="C:\Users\Public\WinApi\TV_v0.1\" />
+		</ResourceCompiler>
+		<Linker>
+			<Add library="gdi32" />
+			<Add library="user32" />
+			<Add library="kernel32" />
+			<Add library="comctl32" />
+			<Add library="bin\Debug\libreadtext.dll.a" />
+		</Linker>
+		<Unit filename="components.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="menu.h" />
+		<Unit filename="menu.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="readtext.h" />
+		<Unit filename="scroll.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="scroll.h" />
+		<Unit filename="textProcessing.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="textProcessing.h" />
+		<Unit filename="textViewer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="textViewer.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
